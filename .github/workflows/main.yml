@@ -1,0 +1,107 @@
+name: Release Management
+
+on:
+  push:
+    branches: [ "main" ] # 在主分支推送时触发
+  # 允许手动触发工作流
+  workflow_dispatch:
+
+# 设置必要的权限以创建Release、PR和标签
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  # 一个可选的任务：在合并PR后，检查提交信息是否符合约定，并提示下一个版本号
+  version-check:
+    name: Check Version
+    runs-on: ubuntu-latest
+    outputs:
+      new_version: ${{ steps.semgrep.outputs.new_version }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 这是一个示例，使用特定Action来分析提交信息（如约定式提交）并推导新版本号
+      # 你需要根据项目情况调整或使用其他工具（如 semantic-release）
+      - name: Analyze commits for version bump (Example)
+        id: semgrep
+        uses: kodepandai/action-semantic-commit-msg@v1
+        # 这个Action主要用于检查格式，可能不输出版本号。
+        # 更高级的配置需要使用 semantic-release 及其插件体系。
+
+  # 核心发布任务
+  create-release:
+    name: Create Release
+    needs: [version-check] # 依赖于版本检查任务（如果存在）
+    runs-on: ubuntu-latest
+    # 通常只在主分支上运行
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2' # 指定你的项目所需的PHP版本
+          tools: composer # 确保Composer可用
+
+      - name: Install Dependencies
+        run: composer install --no-progress --no-interaction
+
+      # 步骤 1: 自动生成 CHANGELOG.md 并推导新版本号
+      - name: Generate Changelog and Version
+        id: changelog
+        uses: requarks/changelog-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # 步骤 2: 更新项目中的版本文件（例如 composer.json）
+      - name: Update version in composer.json
+        run: |
+          # 使用上一步推导出的新版本号 (${{ steps.changelog.outputs.version }})
+          # 使用 jq 工具来更新 composer.json 文件中的 version 字段
+          jq --arg version "${{ steps.changelog.outputs.version }}" '.version = $version' composer.json > composer.json.tmp
+          mv composer.json.tmp composer.json
+          # 检查更新后的文件
+          cat composer.json | jq '.version'
+        # 确保已安装 jq (Ubuntu 镜像通常已预装)
+
+      # 步骤 3: 提交更改后的 composer.json 和 CHANGELOG.md 回仓库
+      - name: Commit version and changelog updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add CHANGELOG.md composer.json
+          git commit -m "chore(release): bump version to ${{ steps.changelog.outputs.version }} [skip ci]"
+          git push
+
+      # 步骤 4: 创建 GitHub Release 和 Git 标签
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.changelog.outputs.version }}
+          name: Release v${{ steps.changelog.outputs.version }}
+          body: ${{ steps.changelog.outputs.changelog }}
+          generate_release_notes: false # 因为我们已使用 changelog-action 生成了内容
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # 可选任务：通知 Packagist 更新（如果你的包是公开的，通常会自动更新）
+  # 如果是私有包或需要立即更新，可以使用以下步骤
+  notify-packagist:
+    name: Notify Packagist
+    needs: [create-release]
+    runs-on: ubuntu-latest
+    if: success()
+    steps:
+      - name: Trigger Packagist Update
+        run: |
+          # 将 YOUR_PACKAGE_NAME 替换为你的包名（如 vendor/package）
+          curl -X POST https://packagist.org/api/update-package?username=YOUR_PACKAGIST_USERNAME&apiToken=${{ secrets.PACKAGIST_API_TOKEN }} -d '{"repository":{"url":"https://github.com/${{ github.repository }}"}}'
+        # 你需要先在仓库的Secrets中配置 PACKAGIST_API_TOKEN
