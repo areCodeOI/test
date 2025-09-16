@@ -9,5 +9,6 @@ class test extends BaseApp {
 	#[Rule('/^t$/')]
 	public function t() {
 		Logger::error('我被载入了！！');
+		$this->api->message->sendGroupMsg($this->group, '我被载入了！！！');
 	}
 }
