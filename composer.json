@@ -1,0 +1,29 @@
+{
+	"name": "高级数据处理器",
+	"version": "2.1.4",
+	"displayName": "高级数据处理器 Pro",
+	"description": "一个提供多种数据处理功能的插件，支持数据转换、分析和可视化",
+	"author": [
+		{
+			"name": "张三",
+			"email": "zhangsan@example.com",
+			"homePage": "https://www.zhangsan-dev.com",
+			"role": "开发者"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"test\\": "src/"
+		}
+	},
+	"require": {},
+	"creationDate": "2023-01-15",
+	"lastUpdate": "2023-10-28",
+	"license": "MIT",
+	"support": {
+		"documentation": "https://docs.example.com/data-processor",
+		"issues": "https://github.com/example/data-processor/issues",
+		"forum": "https://forum.example.com/c/plugins/data-processor",
+		"sourceCode": "https://github.com/example/data-processor"
+	}
+}
