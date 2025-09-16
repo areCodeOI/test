@@ -1,5 +1,5 @@
 {
-	"name": "高级数据处理器",
+	"name": "plugin/test",
 	"version": "2.1.4",
 	"displayName": "高级数据处理器 Pro",
 	"description": "一个提供多种数据处理功能的插件，支持数据转换、分析和可视化",
