@@ -2,10 +2,6 @@
 
 > 本文档由自动生成工具创建于 2025-09-17 13:17:05
 
-## 📁 目录索引
-
-<div id="start"></div>
-
 ```php
 //使用Api中的类
 //在继承 App\Base 之后(必须)
@@ -31,6 +27,10 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 */
 
 ```
+
+## 📁 目录索引
+
+<div id="start"></div>
 
 - **[ai](#api-ai)**
   - [`getAiCharacter`](#api-ai-getaicharacter)
@@ -395,7 +395,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `Object` 
 
-[↩️ 返回类目录](#api-ai) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-ai) | [⬆️ 返回顶部](#start)
 
 <a id="api-ai-getairecord"></a>
 
@@ -408,7 +408,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `Object` 
 
-[↩️ 返回类目录](#api-ai) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-ai) | [⬆️ 返回顶部](#start)
 
 <a id="api-ai-sendgroupairecord"></a>
 
@@ -421,9 +421,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `Object` 
 
-[↩️ 返回类目录](#api-ai) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-ai) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -441,9 +441,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 #### `__construct`
 
-[↩️ 返回类目录](#api-app) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-app) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -461,7 +461,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 #### `init` `(static)`
 
-[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#start)
 
 <a id="api-bot-getlogininfo"></a>
 
@@ -469,7 +469,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#start)
 
 <a id="api-bot-setqqprofile"></a>
 
@@ -484,7 +484,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#start)
 
 <a id="api-bot-getmodelshow"></a>
 
@@ -495,7 +495,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#start)
 
 <a id="api-bot-setmodelshow"></a>
 
@@ -507,7 +507,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#start)
 
 <a id="api-bot-getonlineclients"></a>
 
@@ -518,9 +518,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -543,7 +543,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
 
 <a id="api-cqhttp-getclientkey"></a>
 
@@ -551,7 +551,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
 
 <a id="api-cqhttp-getskey"></a>
 
@@ -562,7 +562,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
 
 <a id="api-cqhttp-getcsrftoken"></a>
 
@@ -570,7 +570,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
 
 <a id="api-cqhttp-getcredentials"></a>
 
@@ -581,7 +581,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
 
 <a id="api-cqhttp-getversioninfo"></a>
 
@@ -589,7 +589,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
 
 <a id="api-cqhttp-getstatus"></a>
 
@@ -597,7 +597,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
 
 <a id="api-cqhttp-setrestart"></a>
 
@@ -608,7 +608,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
 
 <a id="api-cqhttp-reloadeventfilter"></a>
 
@@ -619,7 +619,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
 
 <a id="api-cqhttp-downloadfilter"></a>
 
@@ -632,7 +632,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
 
 <a id="api-cqhttp-checkurlsafely"></a>
 
@@ -643,7 +643,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
 
 <a id="api-cqhttp-cleancache"></a>
 
@@ -651,9 +651,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -678,7 +678,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
 
 <a id="api-file-uploadgroupfile"></a>
 
@@ -692,7 +692,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
 
 <a id="api-file-deletegroupfile"></a>
 
@@ -705,7 +705,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
 
 <a id="api-file-creategroupfilefolder"></a>
 
@@ -717,7 +717,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
 
 <a id="api-file-deletegroupfolder"></a>
 
@@ -729,7 +729,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
 
 <a id="api-file-getgroupfilesysteminfo"></a>
 
@@ -740,7 +740,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
 
 <a id="api-file-getgrouprootfiles"></a>
 
@@ -751,7 +751,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
 
 <a id="api-file-getgrouprootfilesbyfolder"></a>
 
@@ -763,7 +763,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
 
 <a id="api-file-getgroupfileurl"></a>
 
@@ -776,9 +776,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -802,7 +802,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#start)
 
 <a id="api-friend-getfriendlist"></a>
 
@@ -810,7 +810,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#start)
 
 <a id="api-friend-getunidirectionalfriendlist"></a>
 
@@ -818,7 +818,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#start)
 
 <a id="api-friend-deletefriend"></a>
 
@@ -829,7 +829,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#start)
 
 <a id="api-friend-deleteunidirectionalfriend"></a>
 
@@ -840,9 +840,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -866,7 +866,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupinfo-getgrouplist"></a>
 
@@ -877,7 +877,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupinfo-getgroupmemberinfo"></a>
 
@@ -890,7 +890,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupinfo-getgroupmemberlist"></a>
 
@@ -902,7 +902,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupinfo-getgrouphonorinfo"></a>
 
@@ -914,7 +914,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupinfo-getgroupsystemmsg"></a>
 
@@ -922,7 +922,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupinfo-getessencemsglist"></a>
 
@@ -933,7 +933,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupinfo-getgroupatallremain"></a>
 
@@ -944,9 +944,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -970,7 +970,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupsetup-setgroupportrait"></a>
 
@@ -983,7 +983,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupsetup-setgroupadmin"></a>
 
@@ -996,7 +996,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupsetup-setgroupcard"></a>
 
@@ -1009,7 +1009,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupsetup-setgroupspecialtitle"></a>
 
@@ -1023,7 +1023,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupsetup-setgroupban"></a>
 
@@ -1036,7 +1036,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupsetup-setgroupwholeban"></a>
 
@@ -1048,7 +1048,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupsetup-setgroupanonymousban"></a>
 
@@ -1062,7 +1062,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupsetup-setessencemsg"></a>
 
@@ -1073,7 +1073,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupsetup-sendgroupsign"></a>
 
@@ -1084,7 +1084,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupsetup-setgroupanonymous"></a>
 
@@ -1096,7 +1096,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupsetup-sendgroupnotice"></a>
 
@@ -1109,7 +1109,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupsetup-getgroupnotice"></a>
 
@@ -1120,7 +1120,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupsetup-setgroupkick"></a>
 
@@ -1133,7 +1133,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
 
 <a id="api-groupsetup-setgroupleave"></a>
 
@@ -1145,9 +1145,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -1172,7 +1172,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-handle) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-handle) | [⬆️ 返回顶部](#start)
 
 <a id="api-handle-setgroupaddrequest"></a>
 
@@ -1186,9 +1186,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-handle) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-handle) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -1211,7 +1211,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-image) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-image) | [⬆️ 返回顶部](#start)
 
 <a id="api-image-cansendimage"></a>
 
@@ -1219,7 +1219,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-image) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-image) | [⬆️ 返回顶部](#start)
 
 <a id="api-image-ocrimage"></a>
 
@@ -1230,9 +1230,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-image) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-image) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -1258,7 +1258,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-sendgroupmsg"></a>
 
@@ -1271,7 +1271,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-sendmsg"></a>
 
@@ -1286,7 +1286,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-sendmarkdownmsg"></a>
 
@@ -1301,7 +1301,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-sendgreytip"></a>
 
@@ -1314,7 +1314,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-sendkeyboardmsg"></a>
 
@@ -1327,7 +1327,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-getmsg"></a>
 
@@ -1338,7 +1338,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-deletemsg"></a>
 
@@ -1349,7 +1349,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-markmsgasread"></a>
 
@@ -1360,7 +1360,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-getforwardmsg"></a>
 
@@ -1371,7 +1371,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-sendforwardmsg"></a>
 
@@ -1382,7 +1382,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-sendgroupforwardmsg"></a>
 
@@ -1394,7 +1394,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-sendprivateforwardmsg"></a>
 
@@ -1406,7 +1406,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-getgroupmsghistory"></a>
 
@@ -1418,7 +1418,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-escape"></a>
 
@@ -1430,7 +1430,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `?string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structureimage"></a>
 
@@ -1450,7 +1450,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structurevideo"></a>
 
@@ -1464,7 +1464,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structurerecord"></a>
 
@@ -1480,7 +1480,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structureface"></a>
 
@@ -1492,7 +1492,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structuremagic"></a>
 
@@ -1505,7 +1505,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structuregift"></a>
 
@@ -1518,7 +1518,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structurepoke"></a>
 
@@ -1530,7 +1530,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structureshare"></a>
 
@@ -1544,7 +1544,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structurecontact"></a>
 
@@ -1557,7 +1557,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structurelocation"></a>
 
@@ -1572,7 +1572,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structuremusic"></a>
 
@@ -1590,7 +1590,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structurereply"></a>
 
@@ -1606,7 +1606,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structurenode"></a>
 
@@ -1622,7 +1622,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structurecard"></a>
 
@@ -1636,7 +1636,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structuretts"></a>
 
@@ -1648,7 +1648,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structuretext"></a>
 
@@ -1660,7 +1660,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structuretextpro"></a>
 
@@ -1672,7 +1672,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structureat"></a>
 
@@ -1685,7 +1685,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structurejson"></a>
 
@@ -1697,7 +1697,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structuremarkdown"></a>
 
@@ -1709,7 +1709,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structurelongmsg"></a>
 
@@ -1721,7 +1721,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structurekeyboard"></a>
 
@@ -1733,7 +1733,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
 <a id="api-message-structuregreytip"></a>
 
@@ -1745,9 +1745,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -1771,7 +1771,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-record) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-record) | [⬆️ 返回顶部](#start)
 
 <a id="api-record-cansendrecord"></a>
 
@@ -1779,9 +1779,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-record) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-record) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -1799,27 +1799,27 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 #### `__construct`
 
-[↩️ 返回类目录](#api-uin) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-uin) | [⬆️ 返回顶部](#start)
 
 <a id="api-uin-get"></a>
 
 #### `get`
 
-[↩️ 返回类目录](#api-uin) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-uin) | [⬆️ 返回顶部](#start)
 
 <a id="api-uin-set"></a>
 
 #### `set`
 
-[↩️ 返回类目录](#api-uin) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-uin) | [⬆️ 返回顶部](#start)
 
 <a id="api-uin-data"></a>
 
 #### `data`
 
-[↩️ 返回类目录](#api-uin) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#api-uin) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -1844,7 +1844,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 - **参数**:
     - `app` mixed 业务应用实例（兼容原app类参数）
 
-[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#start)
 
 <a id="app-baseapp-comparepermission"></a>
 
@@ -1858,7 +1858,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `bool` 满足返回true，否则false
 
-[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#start)
 
 <a id="app-baseapp-permissiontonum"></a>
 
@@ -1871,7 +1871,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `int` 权限数字（默认1：普通用户）
 
-[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#start)
 
 <a id="app-baseapp-permissiontoname"></a>
 
@@ -1884,7 +1884,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `string` 权限名称（默认'default'）
 
-[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#start)
 
 <a id="app-baseapp-getuserpermission"></a>
 
@@ -1897,13 +1897,13 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `string|int` 权限（名称/数字）
 
-[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#start)
 
 <a id="app-baseapp-__get"></a>
 
 #### `__get`
 
-[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#start)
 
 <a id="app-baseapp-getgroupinfo"></a>
 
@@ -1916,7 +1916,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object|bool` 群信息（失败返回false）
 
-[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#start)
 
 <a id="app-baseapp-groupstatus"></a>
 
@@ -1929,7 +1929,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `bool` 群状态
 
-[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#start)
 
 <a id="app-baseapp-initgroupinfo"></a>
 
@@ -1943,7 +1943,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `object|array|bool` 群信息
 
-[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#start)
 
 <a id="app-baseapp-updategroupinfo"></a>
 
@@ -1957,7 +1957,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `bool` 更新结果
 
-[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#start)
 
 <a id="app-baseapp-scanworkerlist"></a>
 
@@ -1967,9 +1967,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array` Worker类名列表
 
-[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -1981,7 +1981,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 > 此类中没有找到公共方法
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -1999,9 +1999,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 #### `__construct`
 
-[↩️ 返回类目录](#app-controller-common) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-controller-common) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -2019,57 +2019,57 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 #### `Clear`
 
-[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-ai-zhipu"></a>
 
 #### `ZhiPu`
 
-[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-ai-chat"></a>
 
 #### `Chat`
 
-[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-ai-chat2"></a>
 
 #### `chat2`
 
-[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-ai-deduce"></a>
 
 #### `Deduce`
 
-[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-ai-draft"></a>
 
 #### `Draft`
 
-[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-ai-aicharacter"></a>
 
 #### `AiCharacter`
 
-[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-ai-aicharactersend"></a>
 
 #### `AiCharacterSend`
 
-[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-ai-figure"></a>
 
 #### `figure`
 
-[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -2087,27 +2087,27 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 #### `C`
 
-[↩️ 返回类目录](#app-plugins-capi) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-capi) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-capi-ck"></a>
 
 #### `Ck`
 
-[↩️ 返回类目录](#app-plugins-capi) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-capi) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-capi-pay"></a>
 
 #### `Pay`
 
-[↩️ 返回类目录](#app-plugins-capi) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-capi) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-capi-getok"></a>
 
 #### `GetOK`
 
-[↩️ 返回类目录](#app-plugins-capi) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-capi) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -2125,45 +2125,45 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 #### `test`
 
-[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-draw-main"></a>
 
 #### `Main`
 
-[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-draw-main2"></a>
 
 #### `Main2`
 
-[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-draw-get"></a>
 
 #### `Get`
 
-[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-draw-set"></a>
 
 #### `Set`
 
-[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-draw-redis"></a>
 
 #### `Redis`
 
-[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-draw-yun"></a>
 
 #### `Yun`
 
-[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -2181,9 +2181,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 #### `help`
 
-[↩️ 返回类目录](#app-plugins-font) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-font) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -2201,27 +2201,27 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 #### `book_id`
 
-[↩️ 返回类目录](#app-plugins-fq) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-fq) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-fq-getcontent"></a>
 
 #### `getContent`
 
-[↩️ 返回类目录](#app-plugins-fq) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-fq) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-fq-search"></a>
 
 #### `search`
 
-[↩️ 返回类目录](#app-plugins-fq) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-fq) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-fq-searchselect"></a>
 
 #### `searchSelect`
 
-[↩️ 返回类目录](#app-plugins-fq) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-fq) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -2239,75 +2239,75 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 #### `__construct`
 
-[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-landlord-help"></a>
 
 #### `help`
 
-[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-landlord-create"></a>
 
 #### `create`
 
-[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-landlord-join"></a>
 
 #### `join`
 
-[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-landlord-playerready"></a>
 
 #### `playerReady`
 
-[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-landlord-start"></a>
 
 #### `start`
 
-[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-landlord-bidlandlord"></a>
 
 #### `bidLandlord`
 
-[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-landlord-notbidlandlord"></a>
 
 #### `notBidLandlord`
 
-[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-landlord-getinfo"></a>
 
 #### `getinfo`
 
-[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-landlord-play"></a>
 
 #### `play`
 
-[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-landlord-parse"></a>
 
 #### `parse`
 
-[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-landlord-finish"></a>
 
 #### `finish`
 
-[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -2325,21 +2325,21 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 #### `pn`
 
-[↩️ 返回类目录](#app-plugins-permission) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-permission) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-permission-help"></a>
 
 #### `help`
 
-[↩️ 返回类目录](#app-plugins-permission) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-permission) | [⬆️ 返回顶部](#start)
 
 <a id="app-plugins-permission-setting"></a>
 
 #### `setting`
 
-[↩️ 返回类目录](#app-plugins-permission) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#app-plugins-permission) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -2368,7 +2368,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `mixed` 结果（判断存在时返回bool，否则返回处理后的值）
 
-[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#start)
 
 <a id="utils-cache-set"></a>
 
@@ -2381,7 +2381,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
     - `value` mixed 值
     - `expire` int 动态缓存过期时间（秒，0=永久，仅对动态缓存有效）
 
-[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#start)
 
 <a id="utils-cache-del"></a>
 
@@ -2389,7 +2389,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 删除缓存/重置静态属性
 
-[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#start)
 
 <a id="utils-cache-getbatch"></a>
 
@@ -2403,7 +2403,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array` 键值对结果
 
-[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#start)
 
 <a id="utils-cache-setbatch"></a>
 
@@ -2415,7 +2415,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
     - `data` array 键值对数组（key=缓存名，value=值）
     - `expire` int 过期时间（秒，0=永久）
 
-[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#start)
 
 <a id="utils-cache-__callstatic"></a>
 
@@ -2427,9 +2427,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
     - `method` string 方法名
     - `args` array 参数
 
-[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -2447,7 +2447,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 #### `getInstance` `(static)`
 
-[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#start)
 
 <a id="utils-commandparser-command"></a>
 
@@ -2460,7 +2460,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `$this` 
 
-[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#start)
 
 <a id="utils-commandparser-option"></a>
 
@@ -2474,7 +2474,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `$this` 
 
-[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#start)
 
 <a id="utils-commandparser-gethelp"></a>
 
@@ -2484,7 +2484,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `string` 
 
-[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#start)
 
 <a id="utils-commandparser-parse"></a>
 
@@ -2492,9 +2492,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 原解析方法：新增「规则校验」和「默认值填充」
 
-[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -2512,85 +2512,85 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 #### `__construct`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
 
 <a id="utils-coroutinecurl-init"></a>
 
 #### `init` `(static)`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
 
 <a id="utils-coroutinecurl-location"></a>
 
 #### `location`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
 
 <a id="utils-coroutinecurl-addheaders"></a>
 
 #### `addHeaders`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
 
 <a id="utils-coroutinecurl-setheaders"></a>
 
 #### `setHeaders`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
 
 <a id="utils-coroutinecurl-get"></a>
 
 #### `get`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
 
 <a id="utils-coroutinecurl-post"></a>
 
 #### `post`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
 
 <a id="utils-coroutinecurl-request"></a>
 
 #### `request`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
 
 <a id="utils-coroutinecurl-accept"></a>
 
 #### `accept`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
 
 <a id="utils-coroutinecurl-timeout"></a>
 
 #### `timeout`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
 
 <a id="utils-coroutinecurl-encode"></a>
 
 #### `encode`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
 
 <a id="utils-coroutinecurl-proxy"></a>
 
 #### `proxy`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
 
 <a id="utils-coroutinecurl-json"></a>
 
 #### `json`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
 
 <a id="utils-coroutinecurl-object"></a>
 
 #### `object`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
 
 <a id="utils-coroutinecurl-string"></a>
 
@@ -2598,7 +2598,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `string` 
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
 
 <a id="utils-coroutinecurl-__tostring"></a>
 
@@ -2606,9 +2606,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `string` 
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -2636,7 +2636,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `mixed` 配置值
 
-[↩️ 返回类目录](#utils-env) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-env) | [⬆️ 返回顶部](#start)
 
 <a id="utils-env-refreshcache"></a>
 
@@ -2646,7 +2646,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `bool` 刷新结果
 
-[↩️ 返回类目录](#utils-env) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-env) | [⬆️ 返回顶部](#start)
 
 <a id="utils-env-getall"></a>
 
@@ -2656,7 +2656,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array` 全部配置数组
 
-[↩️ 返回类目录](#utils-env) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-env) | [⬆️ 返回顶部](#start)
 
 <a id="utils-env-config"></a>
 
@@ -2670,9 +2670,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `mixed` 配置值
 
-[↩️ 返回类目录](#utils-env) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-env) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -2699,7 +2699,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `self` 
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
 
 <a id="utils-git-setbasepath"></a>
 
@@ -2712,7 +2712,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array` ['success' => bool, 'msg' => string]
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
 
 <a id="utils-git-getbasepath"></a>
 
@@ -2722,7 +2722,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `string|null` 主路径（未配置则返回 null）
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
 
 <a id="utils-git-clone"></a>
 
@@ -2737,7 +2737,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array` ['success' => bool, 'msg' => string, 'data' => array]
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
 
 <a id="utils-git-pull"></a>
 
@@ -2751,7 +2751,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array` ['success' => bool, 'msg' => string]
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
 
 <a id="utils-git-branch"></a>
 
@@ -2766,7 +2766,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array` ['success' => bool, 'msg' => string, 'data' => array|null]
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
 
 <a id="utils-git-commit"></a>
 
@@ -2781,7 +2781,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array` ['success' => bool, 'msg' => string, 'data' => string|null]
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
 
 <a id="utils-git-getcommits"></a>
 
@@ -2795,7 +2795,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array` ['success' => bool, 'msg' => string, 'data' => array|null]
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
 
 <a id="utils-git-getcurrentbranch"></a>
 
@@ -2808,7 +2808,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array` ['success' => bool, 'msg' => string, 'data' => string|null]
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
 
 <a id="utils-git-delete"></a>
 
@@ -2822,9 +2822,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array` ['success' => bool, 'msg' => string]
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -2842,7 +2842,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 #### `init` `(static)`
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
 
 <a id="utils-logger-configure"></a>
 
@@ -2850,7 +2850,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 初始化配置
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
 
 <a id="utils-logger-message"></a>
 
@@ -2858,43 +2858,43 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 静态日志方法
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
 
 <a id="utils-logger-success"></a>
 
 #### `success` `(static)`
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
 
 <a id="utils-logger-error"></a>
 
 #### `error` `(static)`
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
 
 <a id="utils-logger-info"></a>
 
 #### `info` `(static)`
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
 
 <a id="utils-logger-warning"></a>
 
 #### `warning` `(static)`
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
 
 <a id="utils-logger-debug"></a>
 
 #### `debug` `(static)`
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
 
 <a id="utils-logger-tput"></a>
 
 #### `tput` `(static)`
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
 
 <a id="utils-logger-enableconsole"></a>
 
@@ -2902,15 +2902,15 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 开关控制
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
 
 <a id="utils-logger-enablefile"></a>
 
 #### `enableFile` `(static)`
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -2928,7 +2928,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 #### `__construct`
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-render"></a>
 
@@ -2941,7 +2941,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-action"></a>
 
@@ -2956,7 +2956,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-id"></a>
 
@@ -2967,7 +2967,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-permission"></a>
 
@@ -2979,7 +2979,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-next"></a>
 
@@ -2987,7 +2987,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-prev"></a>
 
@@ -2995,7 +2995,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-current"></a>
 
@@ -3003,7 +3003,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-buttons"></a>
 
@@ -3011,7 +3011,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-url"></a>
 
@@ -3023,7 +3023,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `bool` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-image"></a>
 
@@ -3035,7 +3035,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `bool` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-markdown"></a>
 
@@ -3046,19 +3046,19 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-at"></a>
 
 #### `at`
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-face"></a>
 
 #### `Face`
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-add"></a>
 
@@ -3069,7 +3069,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-cleanmarkdown"></a>
 
@@ -3077,7 +3077,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-cleanbutton"></a>
 
@@ -3085,7 +3085,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-clean"></a>
 
@@ -3093,7 +3093,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-get"></a>
 
@@ -3104,7 +3104,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `mixed` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-send"></a>
 
@@ -3115,7 +3115,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `array|Object` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-bind"></a>
 
@@ -3126,7 +3126,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
 <a id="utils-markdown-escape"></a>
 
@@ -3138,9 +3138,9 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `?string` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -3166,7 +3166,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `Bool|String|JSONObject|Array` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
 
 <a id="utils-operate-set"></a>
 
@@ -3180,7 +3180,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `Bool|int` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
 
 <a id="utils-operate-dir"></a>
 
@@ -3193,7 +3193,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `Bool` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
 
 <a id="utils-operate-read_all"></a>
 
@@ -3206,7 +3206,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `Array` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
 
 <a id="utils-operate-readall"></a>
 
@@ -3219,7 +3219,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `Array` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
 
 <a id="utils-operate-read_all_dir"></a>
 
@@ -3232,7 +3232,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `Array` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
 
 <a id="utils-operate-read_all_dir_list"></a>
 
@@ -3245,7 +3245,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `Array` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
 
 <a id="utils-operate-readalldir"></a>
 
@@ -3258,13 +3258,13 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `Array` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
 
 <a id="utils-operate-readfile"></a>
 
 #### `readFile` `(static)`
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
 
 <a id="utils-operate-unzip"></a>
 
@@ -3278,7 +3278,7 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
 
 - **返回**: `boolean` true|false
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
 
 <a id="utils-operate-xcopy"></a>
 
@@ -3291,7 +3291,7 @@ copy 文件夹
 
 - **返回**: `Bool` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
 
 <a id="utils-operate-deldir"></a>
 
@@ -3304,7 +3304,7 @@ copy 文件夹
 
 - **返回**: `bool` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
 
 <a id="utils-operate-del_dir"></a>
 
@@ -3317,7 +3317,7 @@ copy 文件夹
 
 - **返回**: `bool` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
 
 <a id="utils-operate-delfile"></a>
 
@@ -3327,7 +3327,7 @@ copy 文件夹
 
 - **返回**: `Bool` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
 
 <a id="utils-operate-del_file"></a>
 
@@ -3337,9 +3337,9 @@ copy 文件夹
 
 - **返回**: `Bool` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -3357,13 +3357,13 @@ copy 文件夹
 
 #### `__construct`
 
-[↩️ 返回类目录](#utils-pluginmanager) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-pluginmanager) | [⬆️ 返回顶部](#start)
 
 <a id="utils-pluginmanager-readpluginconfig"></a>
 
 #### `readPluginConfig`
 
-[↩️ 返回类目录](#utils-pluginmanager) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-pluginmanager) | [⬆️ 返回顶部](#start)
 
 <a id="utils-pluginmanager-installplugindeps"></a>
 
@@ -3371,7 +3371,7 @@ copy 文件夹
 
 安装插件依赖并生成autoload（优化版：避免重复生成）
 
-[↩️ 返回类目录](#utils-pluginmanager) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-pluginmanager) | [⬆️ 返回顶部](#start)
 
 <a id="utils-pluginmanager-loadpluginautoload"></a>
 
@@ -3379,9 +3379,9 @@ copy 文件夹
 
 加载插件自动加载（优化版：避免重复加载和注册）
 
-[↩️ 返回类目录](#utils-pluginmanager) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-pluginmanager) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -3407,7 +3407,7 @@ copy 文件夹
     - `path` string 路由路径（如 '/api/data'、'/user/:id'）
     - `callback` callable 回调函数（闭包/[$class, $method]/函数名）
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
 
 <a id="utils-route-post"></a>
 
@@ -3419,7 +3419,7 @@ copy 文件夹
     - `path` string 路由路径
     - `callback` callable 回调函数
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
 
 <a id="utils-route-put"></a>
 
@@ -3431,7 +3431,7 @@ copy 文件夹
     - `path` string 路由路径
     - `callback` callable 回调函数
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
 
 <a id="utils-route-delete"></a>
 
@@ -3443,7 +3443,7 @@ copy 文件夹
     - `path` string 路由路径
     - `callback` callable 回调函数
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
 
 <a id="utils-route-any"></a>
 
@@ -3455,7 +3455,7 @@ copy 文件夹
     - `path` string 路由路径
     - `callback` callable 回调函数
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
 
 <a id="utils-route-match"></a>
 
@@ -3469,7 +3469,7 @@ copy 文件夹
 
 - **返回**: `array|null` [回调函数, 路由参数数组]，未匹配返回null
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
 
 <a id="utils-route-registerbyannotation"></a>
 
@@ -3480,7 +3480,7 @@ copy 文件夹
 - **参数**:
     - `controllerClasses` string|array 控制器类名（单个类名或类名数组）
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
 
 <a id="utils-route-clear"></a>
 
@@ -3488,7 +3488,7 @@ copy 文件夹
 
 清空所有路由（测试/重置场景用）
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
 
 <a id="utils-route-getroutes"></a>
 
@@ -3498,7 +3498,7 @@ copy 文件夹
 
 - **返回**: `array` 路由规则数组
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
 
 <a id="utils-route-hasroute"></a>
 
@@ -3512,9 +3512,9 @@ copy 文件夹
 
 - **返回**: `bool` 是否存在
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -3532,7 +3532,7 @@ copy 文件夹
 
 #### `getInstance` `(static)`
 
-[↩️ 返回类目录](#utils-worker) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-worker) | [⬆️ 返回顶部](#start)
 
 <a id="utils-worker-getworkerlist"></a>
 
@@ -3540,7 +3540,7 @@ copy 文件夹
 
 核心方法：获取Worker列表，不存在则自动初始化空列表
 
-[↩️ 返回类目录](#utils-worker) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-worker) | [⬆️ 返回顶部](#start)
 
 <a id="utils-worker-addworker"></a>
 
@@ -3551,7 +3551,7 @@ copy 文件夹
 - **参数**:
     - `className` string 完整类名（如App\Plugins\Demo）
 
-[↩️ 返回类目录](#utils-worker) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-worker) | [⬆️ 返回顶部](#start)
 
 <a id="utils-worker-removeworker"></a>
 
@@ -3562,9 +3562,9 @@ copy 文件夹
 - **参数**:
     - `className` string 完整类名
 
-[↩️ 返回类目录](#utils-worker) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-worker) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
@@ -3582,7 +3582,7 @@ copy 文件夹
 
 #### `getInstance` `(static)`
 
-[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#start)
 
 <a id="utils-yargs-command"></a>
 
@@ -3590,7 +3590,7 @@ copy 文件夹
 
 注册命令描述（支持子命令）
 
-[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#start)
 
 <a id="utils-yargs-option"></a>
 
@@ -3598,7 +3598,7 @@ copy 文件夹
 
 注册选项参数规则
 
-[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#start)
 
 <a id="utils-yargs-positional"></a>
 
@@ -3606,7 +3606,7 @@ copy 文件夹
 
 注册位置参数规则
 
-[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#start)
 
 <a id="utils-yargs-gethelp"></a>
 
@@ -3614,7 +3614,7 @@ copy 文件夹
 
 生成帮助信息
 
-[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#start)
 
 <a id="utils-yargs-parse"></a>
 
@@ -3622,9 +3622,9 @@ copy 文件夹
 
 解析入口
 
-[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#目录索引)
+[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#start)
 
-[⬆️ 返回顶部](#目录索引)
+[⬆️ 返回顶部](#start)
 
 ---
 
