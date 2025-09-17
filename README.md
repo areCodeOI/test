@@ -3,7 +3,11 @@
 > 本文档由自动生成工具创建于 2025-09-17 12:56:05
 
 ## 📁 目录索引
+
+
 <div id="start"></div>
+
+
 - **[ai](#api-ai)**
   - [`getAiCharacter`](#api-ai-getaicharacter)
   - [`getAiRecord`](#api-ai-getairecord)
