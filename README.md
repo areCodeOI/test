@@ -1,12 +1,36 @@
 # API 文档
 
-> 本文档由自动生成工具创建于 2025-09-17 12:56:05
+> 本文档由自动生成工具创建于 2025-09-17 13:17:05
 
 ## 📁 目录索引
 
-
 <div id="start"></div>
 
+```php
+//使用Api中的类
+//在继承 App\Base 之后(必须)
+$this->api->message; //使用Api\message 其他以此类推
+$this->redis; //redis类
+$this->group; //当前群号
+$this->qq; //发言人
+$this->nickname; //发言人昵称
+$this->sender; //发言人的object
+$this->input; //参数列表
+$this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
+
+
+//不继承 App\BaseApp 不会被识别为插件
+
+#[\Controller\Attr\Rule()]
+/**
+ * 该注解方法必须的，不使用不会被命令解析
+ * @param string $match 正则表达式
+ * @param string $name 菜单列表中显示名，可以为空
+ * @param string $pattern 忘了干啥的了，不必理会
+ * @param string|int $permission 权限等级，>= 才能触发，最高5(super)，可选4(owner)、3(admin)、2(user)、1(default)
+*/
+
+```
 
 - **[ai](#api-ai)**
   - [`getAiCharacter`](#api-ai-getaicharacter)
@@ -141,6 +165,78 @@
   - [`get`](#api-uin-get)
   - [`set`](#api-uin-set)
   - [`data`](#api-uin-data)
+
+- **[BaseApp](#app-baseapp)**
+  - [`__construct`](#app-baseapp-__construct)
+  - [`comparePermission`](#app-baseapp-comparepermission)
+  - [`permissionToNum`](#app-baseapp-permissiontonum)
+  - [`permissionToName`](#app-baseapp-permissiontoname)
+  - [`getUserPermission`](#app-baseapp-getuserpermission)
+  - [`__get`](#app-baseapp-__get)
+  - [`getGroupInfo`](#app-baseapp-getgroupinfo)
+  - [`groupStatus`](#app-baseapp-groupstatus)
+  - [`initGroupInfo`](#app-baseapp-initgroupinfo)
+  - [`updateGroupInfo`](#app-baseapp-updategroupinfo)
+  - [`scanWorkerList`](#app-baseapp-scanworkerlist)
+
+- **[BaseController](#app-basecontroller)**
+
+- **[Common](#app-controller-common)**
+  - [`__construct`](#app-controller-common-__construct)
+
+- **[Ai](#app-plugins-ai)**
+  - [`Clear`](#app-plugins-ai-clear)
+  - [`ZhiPu`](#app-plugins-ai-zhipu)
+  - [`Chat`](#app-plugins-ai-chat)
+  - [`chat2`](#app-plugins-ai-chat2)
+  - [`Deduce`](#app-plugins-ai-deduce)
+  - [`Draft`](#app-plugins-ai-draft)
+  - [`AiCharacter`](#app-plugins-ai-aicharacter)
+  - [`AiCharacterSend`](#app-plugins-ai-aicharactersend)
+  - [`figure`](#app-plugins-ai-figure)
+
+- **[Capi](#app-plugins-capi)**
+  - [`C`](#app-plugins-capi-c)
+  - [`Ck`](#app-plugins-capi-ck)
+  - [`Pay`](#app-plugins-capi-pay)
+  - [`GetOK`](#app-plugins-capi-getok)
+
+- **[Draw](#app-plugins-draw)**
+  - [`test`](#app-plugins-draw-test)
+  - [`Main`](#app-plugins-draw-main)
+  - [`Main2`](#app-plugins-draw-main2)
+  - [`Get`](#app-plugins-draw-get)
+  - [`Set`](#app-plugins-draw-set)
+  - [`Redis`](#app-plugins-draw-redis)
+  - [`Yun`](#app-plugins-draw-yun)
+
+- **[Font](#app-plugins-font)**
+  - [`help`](#app-plugins-font-help)
+
+- **[Fq](#app-plugins-fq)**
+  - [`book_id`](#app-plugins-fq-book_id)
+  - [`getContent`](#app-plugins-fq-getcontent)
+  - [`search`](#app-plugins-fq-search)
+  - [`searchSelect`](#app-plugins-fq-searchselect)
+
+- **[Landlord](#app-plugins-landlord)**
+  - [`__construct`](#app-plugins-landlord-__construct)
+  - [`help`](#app-plugins-landlord-help)
+  - [`create`](#app-plugins-landlord-create)
+  - [`join`](#app-plugins-landlord-join)
+  - [`playerReady`](#app-plugins-landlord-playerready)
+  - [`start`](#app-plugins-landlord-start)
+  - [`bidLandlord`](#app-plugins-landlord-bidlandlord)
+  - [`notBidLandlord`](#app-plugins-landlord-notbidlandlord)
+  - [`getinfo`](#app-plugins-landlord-getinfo)
+  - [`play`](#app-plugins-landlord-play)
+  - [`parse`](#app-plugins-landlord-parse)
+  - [`finish`](#app-plugins-landlord-finish)
+
+- **[Permission](#app-plugins-permission)**
+  - [`pn`](#app-plugins-permission-pn)
+  - [`help`](#app-plugins-permission-help)
+  - [`setting`](#app-plugins-permission-setting)
 
 - **[Cache](#utils-cache)**
   - [`get`](#utils-cache-get)
@@ -299,7 +395,7 @@
 
 - **返回**: `Object` 
 
-[↩️ 返回类目录](#api-ai) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-ai) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-ai-getairecord"></a>
 
@@ -312,7 +408,7 @@
 
 - **返回**: `Object` 
 
-[↩️ 返回类目录](#api-ai) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-ai) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-ai-sendgroupairecord"></a>
 
@@ -325,9 +421,9 @@
 
 - **返回**: `Object` 
 
-[↩️ 返回类目录](#api-ai) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-ai) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -345,9 +441,9 @@
 
 #### `__construct`
 
-[↩️ 返回类目录](#api-app) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-app) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -365,7 +461,7 @@
 
 #### `init` `(static)`
 
-[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-bot-getlogininfo"></a>
 
@@ -373,7 +469,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-bot-setqqprofile"></a>
 
@@ -388,7 +484,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-bot-getmodelshow"></a>
 
@@ -399,7 +495,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-bot-setmodelshow"></a>
 
@@ -411,7 +507,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-bot-getonlineclients"></a>
 
@@ -422,9 +518,9 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-bot) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -447,7 +543,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-cqhttp-getclientkey"></a>
 
@@ -455,7 +551,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-cqhttp-getskey"></a>
 
@@ -466,7 +562,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-cqhttp-getcsrftoken"></a>
 
@@ -474,7 +570,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-cqhttp-getcredentials"></a>
 
@@ -485,7 +581,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-cqhttp-getversioninfo"></a>
 
@@ -493,7 +589,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-cqhttp-getstatus"></a>
 
@@ -501,7 +597,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-cqhttp-setrestart"></a>
 
@@ -512,7 +608,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-cqhttp-reloadeventfilter"></a>
 
@@ -523,7 +619,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-cqhttp-downloadfilter"></a>
 
@@ -536,7 +632,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-cqhttp-checkurlsafely"></a>
 
@@ -547,7 +643,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-cqhttp-cleancache"></a>
 
@@ -555,9 +651,9 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-cqhttp) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -582,7 +678,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-file-uploadgroupfile"></a>
 
@@ -596,7 +692,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-file-deletegroupfile"></a>
 
@@ -609,7 +705,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-file-creategroupfilefolder"></a>
 
@@ -621,7 +717,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-file-deletegroupfolder"></a>
 
@@ -633,7 +729,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-file-getgroupfilesysteminfo"></a>
 
@@ -644,7 +740,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-file-getgrouprootfiles"></a>
 
@@ -655,7 +751,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-file-getgrouprootfilesbyfolder"></a>
 
@@ -667,7 +763,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-file-getgroupfileurl"></a>
 
@@ -680,9 +776,9 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-file) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -706,7 +802,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-friend-getfriendlist"></a>
 
@@ -714,7 +810,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-friend-getunidirectionalfriendlist"></a>
 
@@ -722,7 +818,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-friend-deletefriend"></a>
 
@@ -733,7 +829,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-friend-deleteunidirectionalfriend"></a>
 
@@ -744,9 +840,9 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-friend) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -770,7 +866,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupinfo-getgrouplist"></a>
 
@@ -781,7 +877,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupinfo-getgroupmemberinfo"></a>
 
@@ -794,7 +890,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupinfo-getgroupmemberlist"></a>
 
@@ -806,7 +902,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupinfo-getgrouphonorinfo"></a>
 
@@ -818,7 +914,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupinfo-getgroupsystemmsg"></a>
 
@@ -826,7 +922,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupinfo-getessencemsglist"></a>
 
@@ -837,7 +933,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupinfo-getgroupatallremain"></a>
 
@@ -848,9 +944,9 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupinfo) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -874,7 +970,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupsetup-setgroupportrait"></a>
 
@@ -887,7 +983,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupsetup-setgroupadmin"></a>
 
@@ -900,7 +996,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupsetup-setgroupcard"></a>
 
@@ -913,7 +1009,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupsetup-setgroupspecialtitle"></a>
 
@@ -927,7 +1023,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupsetup-setgroupban"></a>
 
@@ -940,7 +1036,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupsetup-setgroupwholeban"></a>
 
@@ -952,7 +1048,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupsetup-setgroupanonymousban"></a>
 
@@ -966,7 +1062,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupsetup-setessencemsg"></a>
 
@@ -977,7 +1073,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupsetup-sendgroupsign"></a>
 
@@ -988,7 +1084,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupsetup-setgroupanonymous"></a>
 
@@ -1000,7 +1096,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupsetup-sendgroupnotice"></a>
 
@@ -1013,7 +1109,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupsetup-getgroupnotice"></a>
 
@@ -1024,7 +1120,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupsetup-setgroupkick"></a>
 
@@ -1037,7 +1133,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-groupsetup-setgroupleave"></a>
 
@@ -1049,9 +1145,9 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-groupsetup) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -1076,7 +1172,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-handle) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-handle) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-handle-setgroupaddrequest"></a>
 
@@ -1090,9 +1186,9 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-handle) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-handle) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -1115,7 +1211,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-image) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-image) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-image-cansendimage"></a>
 
@@ -1123,7 +1219,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-image) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-image) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-image-ocrimage"></a>
 
@@ -1134,9 +1230,9 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-image) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-image) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -1162,7 +1258,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-sendgroupmsg"></a>
 
@@ -1175,7 +1271,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-sendmsg"></a>
 
@@ -1190,7 +1286,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-sendmarkdownmsg"></a>
 
@@ -1205,7 +1301,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-sendgreytip"></a>
 
@@ -1218,7 +1314,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-sendkeyboardmsg"></a>
 
@@ -1231,7 +1327,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-getmsg"></a>
 
@@ -1242,7 +1338,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-deletemsg"></a>
 
@@ -1253,7 +1349,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-markmsgasread"></a>
 
@@ -1264,7 +1360,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-getforwardmsg"></a>
 
@@ -1275,7 +1371,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-sendforwardmsg"></a>
 
@@ -1286,7 +1382,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-sendgroupforwardmsg"></a>
 
@@ -1298,7 +1394,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-sendprivateforwardmsg"></a>
 
@@ -1310,7 +1406,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-getgroupmsghistory"></a>
 
@@ -1322,7 +1418,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-escape"></a>
 
@@ -1334,7 +1430,7 @@
 
 - **返回**: `?string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structureimage"></a>
 
@@ -1354,7 +1450,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structurevideo"></a>
 
@@ -1368,7 +1464,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structurerecord"></a>
 
@@ -1384,7 +1480,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structureface"></a>
 
@@ -1396,7 +1492,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structuremagic"></a>
 
@@ -1409,7 +1505,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structuregift"></a>
 
@@ -1422,7 +1518,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structurepoke"></a>
 
@@ -1434,7 +1530,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structureshare"></a>
 
@@ -1448,7 +1544,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structurecontact"></a>
 
@@ -1461,7 +1557,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structurelocation"></a>
 
@@ -1476,7 +1572,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structuremusic"></a>
 
@@ -1494,7 +1590,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structurereply"></a>
 
@@ -1510,7 +1606,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structurenode"></a>
 
@@ -1526,7 +1622,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structurecard"></a>
 
@@ -1540,7 +1636,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structuretts"></a>
 
@@ -1552,7 +1648,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structuretext"></a>
 
@@ -1564,7 +1660,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structuretextpro"></a>
 
@@ -1576,7 +1672,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structureat"></a>
 
@@ -1589,7 +1685,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structurejson"></a>
 
@@ -1601,7 +1697,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structuremarkdown"></a>
 
@@ -1613,7 +1709,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structurelongmsg"></a>
 
@@ -1625,7 +1721,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structurekeyboard"></a>
 
@@ -1637,7 +1733,7 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-message-structuregreytip"></a>
 
@@ -1649,9 +1745,9 @@
 
 - **返回**: `array|string` 
 
-[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-message) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -1675,7 +1771,7 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-record) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-record) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-record-cansendrecord"></a>
 
@@ -1683,9 +1779,9 @@
 
 - **返回**: `object` 
 
-[↩️ 返回类目录](#api-record) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-record) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -1703,27 +1799,547 @@
 
 #### `__construct`
 
-[↩️ 返回类目录](#api-uin) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-uin) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-uin-get"></a>
 
 #### `get`
 
-[↩️ 返回类目录](#api-uin) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-uin) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-uin-set"></a>
 
 #### `set`
 
-[↩️ 返回类目录](#api-uin) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-uin) | [⬆️ 返回顶部](#目录索引)
 
 <a id="api-uin-data"></a>
 
 #### `data`
 
-[↩️ 返回类目录](#api-uin) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#api-uin) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
+
+---
+
+<a id="app-baseapp"></a>
+
+## BaseApp 类
+
+> 完整类名: `App\BaseApp`
+
+> 插件统一基础类 优化Redis连接、初始化逻辑及性能
+
+### 📋 可用方法
+
+**方法导航**: [`__construct`](#app-baseapp-__construct) | [`comparePermission`](#app-baseapp-comparepermission) | [`permissionToNum`](#app-baseapp-permissiontonum) | [`permissionToName`](#app-baseapp-permissiontoname) | [`getUserPermission`](#app-baseapp-getuserpermission) | [`__get`](#app-baseapp-__get) | [`getGroupInfo`](#app-baseapp-getgroupinfo) | [`groupStatus`](#app-baseapp-groupstatus) | [`initGroupInfo`](#app-baseapp-initgroupinfo) | [`updateGroupInfo`](#app-baseapp-updategroupinfo) | [`scanWorkerList`](#app-baseapp-scanworkerlist)
+
+<a id="app-baseapp-__construct"></a>
+
+#### `__construct`
+
+构造函数：统一初始化所有基础资源
+
+- **参数**:
+    - `app` mixed 业务应用实例（兼容原app类参数）
+
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-baseapp-comparepermission"></a>
+
+#### `comparePermission`
+
+权限比较：判断用户权限是否满足要求
+
+- **参数**:
+    - `userPerm` string|int 用户当前权限
+    - `requiredPerm` string|int 所需权限
+
+- **返回**: `bool` 满足返回true，否则false
+
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-baseapp-permissiontonum"></a>
+
+#### `permissionToNum`
+
+权限名称转数字（统一格式）
+
+- **参数**:
+    - `perm` string|int 权限（名称/数字）
+
+- **返回**: `int` 权限数字（默认1：普通用户）
+
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-baseapp-permissiontoname"></a>
+
+#### `permissionToName`
+
+权限数字转名称（统一格式）
+
+- **参数**:
+    - `perm` string|int 权限（数字/名称）
+
+- **返回**: `string` 权限名称（默认'default'）
+
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-baseapp-getuserpermission"></a>
+
+#### `getUserPermission`
+
+获取用户权限（从Redis缓存读取）
+
+- **参数**:
+    - `userQQ` float 用户QQ
+
+- **返回**: `string|int` 权限（名称/数字）
+
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-baseapp-__get"></a>
+
+#### `__get`
+
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-baseapp-getgroupinfo"></a>
+
+#### `getGroupInfo`
+
+获取群信息（优化版：避免递归，支持插件）
+
+- **参数**:
+    - `group` float 群号
+
+- **返回**: `object|bool` 群信息（失败返回false）
+
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-baseapp-groupstatus"></a>
+
+#### `groupStatus`
+
+检测群状态：开启返回true，关闭返回false
+
+- **参数**:
+    - `group` float 群号
+
+- **返回**: `bool` 群状态
+
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-baseapp-initgroupinfo"></a>
+
+#### `initGroupInfo`
+
+初始化群信息（兼容旧数据）
+
+- **参数**:
+    - `group` float 群号
+    - `isArray` bool 是否返回数组
+
+- **返回**: `object|array|bool` 群信息
+
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-baseapp-updategroupinfo"></a>
+
+#### `updateGroupInfo`
+
+更新群信息
+
+- **参数**:
+    - `group` float 群号
+    - `info` object|array 新群信息
+
+- **返回**: `bool` 更新结果
+
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-baseapp-scanworkerlist"></a>
+
+#### `scanWorkerList`
+
+扫描Worker列表（对接Router的自动扫描逻辑）
+
+- **返回**: `array` Worker类名列表
+
+[↩️ 返回类目录](#app-baseapp) | [⬆️ 返回顶部](#目录索引)
+
+[⬆️ 返回顶部](#目录索引)
+
+---
+
+<a id="app-basecontroller"></a>
+
+## BaseController 类
+
+> 完整类名: `App\BaseController`
+
+> 此类中没有找到公共方法
+
+[⬆️ 返回顶部](#目录索引)
+
+---
+
+<a id="app-controller-common"></a>
+
+## Common 类
+
+> 完整类名: `App\Controller\Common`
+
+### 📋 可用方法
+
+**方法导航**: [`__construct`](#app-controller-common-__construct)
+
+<a id="app-controller-common-__construct"></a>
+
+#### `__construct`
+
+[↩️ 返回类目录](#app-controller-common) | [⬆️ 返回顶部](#目录索引)
+
+[⬆️ 返回顶部](#目录索引)
+
+---
+
+<a id="app-plugins-ai"></a>
+
+## Ai 类
+
+> 完整类名: `App\Plugins\Ai`
+
+### 📋 可用方法
+
+**方法导航**: [`Clear`](#app-plugins-ai-clear) | [`ZhiPu`](#app-plugins-ai-zhipu) | [`Chat`](#app-plugins-ai-chat) | [`chat2`](#app-plugins-ai-chat2) | [`Deduce`](#app-plugins-ai-deduce) | [`Draft`](#app-plugins-ai-draft) | [`AiCharacter`](#app-plugins-ai-aicharacter) | [`AiCharacterSend`](#app-plugins-ai-aicharactersend) | [`figure`](#app-plugins-ai-figure)
+
+<a id="app-plugins-ai-clear"></a>
+
+#### `Clear`
+
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-ai-zhipu"></a>
+
+#### `ZhiPu`
+
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-ai-chat"></a>
+
+#### `Chat`
+
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-ai-chat2"></a>
+
+#### `chat2`
+
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-ai-deduce"></a>
+
+#### `Deduce`
+
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-ai-draft"></a>
+
+#### `Draft`
+
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-ai-aicharacter"></a>
+
+#### `AiCharacter`
+
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-ai-aicharactersend"></a>
+
+#### `AiCharacterSend`
+
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-ai-figure"></a>
+
+#### `figure`
+
+[↩️ 返回类目录](#app-plugins-ai) | [⬆️ 返回顶部](#目录索引)
+
+[⬆️ 返回顶部](#目录索引)
+
+---
+
+<a id="app-plugins-capi"></a>
+
+## Capi 类
+
+> 完整类名: `App\Plugins\Capi`
+
+### 📋 可用方法
+
+**方法导航**: [`C`](#app-plugins-capi-c) | [`Ck`](#app-plugins-capi-ck) | [`Pay`](#app-plugins-capi-pay) | [`GetOK`](#app-plugins-capi-getok)
+
+<a id="app-plugins-capi-c"></a>
+
+#### `C`
+
+[↩️ 返回类目录](#app-plugins-capi) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-capi-ck"></a>
+
+#### `Ck`
+
+[↩️ 返回类目录](#app-plugins-capi) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-capi-pay"></a>
+
+#### `Pay`
+
+[↩️ 返回类目录](#app-plugins-capi) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-capi-getok"></a>
+
+#### `GetOK`
+
+[↩️ 返回类目录](#app-plugins-capi) | [⬆️ 返回顶部](#目录索引)
+
+[⬆️ 返回顶部](#目录索引)
+
+---
+
+<a id="app-plugins-draw"></a>
+
+## Draw 类
+
+> 完整类名: `App\Plugins\Draw`
+
+### 📋 可用方法
+
+**方法导航**: [`test`](#app-plugins-draw-test) | [`Main`](#app-plugins-draw-main) | [`Main2`](#app-plugins-draw-main2) | [`Get`](#app-plugins-draw-get) | [`Set`](#app-plugins-draw-set) | [`Redis`](#app-plugins-draw-redis) | [`Yun`](#app-plugins-draw-yun)
+
+<a id="app-plugins-draw-test"></a>
+
+#### `test`
+
+[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-draw-main"></a>
+
+#### `Main`
+
+[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-draw-main2"></a>
+
+#### `Main2`
+
+[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-draw-get"></a>
+
+#### `Get`
+
+[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-draw-set"></a>
+
+#### `Set`
+
+[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-draw-redis"></a>
+
+#### `Redis`
+
+[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-draw-yun"></a>
+
+#### `Yun`
+
+[↩️ 返回类目录](#app-plugins-draw) | [⬆️ 返回顶部](#目录索引)
+
+[⬆️ 返回顶部](#目录索引)
+
+---
+
+<a id="app-plugins-font"></a>
+
+## Font 类
+
+> 完整类名: `App\Plugins\Font`
+
+### 📋 可用方法
+
+**方法导航**: [`help`](#app-plugins-font-help)
+
+<a id="app-plugins-font-help"></a>
+
+#### `help`
+
+[↩️ 返回类目录](#app-plugins-font) | [⬆️ 返回顶部](#目录索引)
+
+[⬆️ 返回顶部](#目录索引)
+
+---
+
+<a id="app-plugins-fq"></a>
+
+## Fq 类
+
+> 完整类名: `App\Plugins\Fq`
+
+### 📋 可用方法
+
+**方法导航**: [`book_id`](#app-plugins-fq-book_id) | [`getContent`](#app-plugins-fq-getcontent) | [`search`](#app-plugins-fq-search) | [`searchSelect`](#app-plugins-fq-searchselect)
+
+<a id="app-plugins-fq-book_id"></a>
+
+#### `book_id`
+
+[↩️ 返回类目录](#app-plugins-fq) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-fq-getcontent"></a>
+
+#### `getContent`
+
+[↩️ 返回类目录](#app-plugins-fq) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-fq-search"></a>
+
+#### `search`
+
+[↩️ 返回类目录](#app-plugins-fq) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-fq-searchselect"></a>
+
+#### `searchSelect`
+
+[↩️ 返回类目录](#app-plugins-fq) | [⬆️ 返回顶部](#目录索引)
+
+[⬆️ 返回顶部](#目录索引)
+
+---
+
+<a id="app-plugins-landlord"></a>
+
+## Landlord 类
+
+> 完整类名: `App\Plugins\Landlord`
+
+### 📋 可用方法
+
+**方法导航**: [`__construct`](#app-plugins-landlord-__construct) | [`help`](#app-plugins-landlord-help) | [`create`](#app-plugins-landlord-create) | [`join`](#app-plugins-landlord-join) | [`playerReady`](#app-plugins-landlord-playerready) | [`start`](#app-plugins-landlord-start) | [`bidLandlord`](#app-plugins-landlord-bidlandlord) | [`notBidLandlord`](#app-plugins-landlord-notbidlandlord) | [`getinfo`](#app-plugins-landlord-getinfo) | [`play`](#app-plugins-landlord-play) | [`parse`](#app-plugins-landlord-parse) | [`finish`](#app-plugins-landlord-finish)
+
+<a id="app-plugins-landlord-__construct"></a>
+
+#### `__construct`
+
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-landlord-help"></a>
+
+#### `help`
+
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-landlord-create"></a>
+
+#### `create`
+
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-landlord-join"></a>
+
+#### `join`
+
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-landlord-playerready"></a>
+
+#### `playerReady`
+
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-landlord-start"></a>
+
+#### `start`
+
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-landlord-bidlandlord"></a>
+
+#### `bidLandlord`
+
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-landlord-notbidlandlord"></a>
+
+#### `notBidLandlord`
+
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-landlord-getinfo"></a>
+
+#### `getinfo`
+
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-landlord-play"></a>
+
+#### `play`
+
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-landlord-parse"></a>
+
+#### `parse`
+
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-landlord-finish"></a>
+
+#### `finish`
+
+[↩️ 返回类目录](#app-plugins-landlord) | [⬆️ 返回顶部](#目录索引)
+
+[⬆️ 返回顶部](#目录索引)
+
+---
+
+<a id="app-plugins-permission"></a>
+
+## Permission 类
+
+> 完整类名: `App\Plugins\Permission`
+
+### 📋 可用方法
+
+**方法导航**: [`pn`](#app-plugins-permission-pn) | [`help`](#app-plugins-permission-help) | [`setting`](#app-plugins-permission-setting)
+
+<a id="app-plugins-permission-pn"></a>
+
+#### `pn`
+
+[↩️ 返回类目录](#app-plugins-permission) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-permission-help"></a>
+
+#### `help`
+
+[↩️ 返回类目录](#app-plugins-permission) | [⬆️ 返回顶部](#目录索引)
+
+<a id="app-plugins-permission-setting"></a>
+
+#### `setting`
+
+[↩️ 返回类目录](#app-plugins-permission) | [⬆️ 返回顶部](#目录索引)
+
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -1752,7 +2368,7 @@
 
 - **返回**: `mixed` 结果（判断存在时返回bool，否则返回处理后的值）
 
-[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-cache-set"></a>
 
@@ -1765,7 +2381,7 @@
     - `value` mixed 值
     - `expire` int 动态缓存过期时间（秒，0=永久，仅对动态缓存有效）
 
-[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-cache-del"></a>
 
@@ -1773,7 +2389,7 @@
 
 删除缓存/重置静态属性
 
-[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-cache-getbatch"></a>
 
@@ -1787,7 +2403,7 @@
 
 - **返回**: `array` 键值对结果
 
-[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-cache-setbatch"></a>
 
@@ -1799,7 +2415,7 @@
     - `data` array 键值对数组（key=缓存名，value=值）
     - `expire` int 过期时间（秒，0=永久）
 
-[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-cache-__callstatic"></a>
 
@@ -1811,9 +2427,9 @@
     - `method` string 方法名
     - `args` array 参数
 
-[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-cache) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -1831,7 +2447,7 @@
 
 #### `getInstance` `(static)`
 
-[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-commandparser-command"></a>
 
@@ -1844,7 +2460,7 @@
 
 - **返回**: `$this` 
 
-[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-commandparser-option"></a>
 
@@ -1858,7 +2474,7 @@
 
 - **返回**: `$this` 
 
-[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-commandparser-gethelp"></a>
 
@@ -1868,7 +2484,7 @@
 
 - **返回**: `string` 
 
-[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-commandparser-parse"></a>
 
@@ -1876,9 +2492,9 @@
 
 原解析方法：新增「规则校验」和「默认值填充」
 
-[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-commandparser) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -1896,85 +2512,85 @@
 
 #### `__construct`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-coroutinecurl-init"></a>
 
 #### `init` `(static)`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-coroutinecurl-location"></a>
 
 #### `location`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-coroutinecurl-addheaders"></a>
 
 #### `addHeaders`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-coroutinecurl-setheaders"></a>
 
 #### `setHeaders`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-coroutinecurl-get"></a>
 
 #### `get`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-coroutinecurl-post"></a>
 
 #### `post`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-coroutinecurl-request"></a>
 
 #### `request`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-coroutinecurl-accept"></a>
 
 #### `accept`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-coroutinecurl-timeout"></a>
 
 #### `timeout`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-coroutinecurl-encode"></a>
 
 #### `encode`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-coroutinecurl-proxy"></a>
 
 #### `proxy`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-coroutinecurl-json"></a>
 
 #### `json`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-coroutinecurl-object"></a>
 
 #### `object`
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-coroutinecurl-string"></a>
 
@@ -1982,7 +2598,7 @@
 
 - **返回**: `string` 
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-coroutinecurl-__tostring"></a>
 
@@ -1990,9 +2606,9 @@
 
 - **返回**: `string` 
 
-[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-coroutinecurl) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -2020,7 +2636,7 @@
 
 - **返回**: `mixed` 配置值
 
-[↩️ 返回类目录](#utils-env) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-env) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-env-refreshcache"></a>
 
@@ -2030,7 +2646,7 @@
 
 - **返回**: `bool` 刷新结果
 
-[↩️ 返回类目录](#utils-env) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-env) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-env-getall"></a>
 
@@ -2040,7 +2656,7 @@
 
 - **返回**: `array` 全部配置数组
 
-[↩️ 返回类目录](#utils-env) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-env) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-env-config"></a>
 
@@ -2054,9 +2670,9 @@
 
 - **返回**: `mixed` 配置值
 
-[↩️ 返回类目录](#utils-env) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-env) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -2083,7 +2699,7 @@
 
 - **返回**: `self` 
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-git-setbasepath"></a>
 
@@ -2096,7 +2712,7 @@
 
 - **返回**: `array` ['success' => bool, 'msg' => string]
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-git-getbasepath"></a>
 
@@ -2106,7 +2722,7 @@
 
 - **返回**: `string|null` 主路径（未配置则返回 null）
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-git-clone"></a>
 
@@ -2121,7 +2737,7 @@
 
 - **返回**: `array` ['success' => bool, 'msg' => string, 'data' => array]
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-git-pull"></a>
 
@@ -2135,7 +2751,7 @@
 
 - **返回**: `array` ['success' => bool, 'msg' => string]
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-git-branch"></a>
 
@@ -2150,7 +2766,7 @@
 
 - **返回**: `array` ['success' => bool, 'msg' => string, 'data' => array|null]
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-git-commit"></a>
 
@@ -2165,7 +2781,7 @@
 
 - **返回**: `array` ['success' => bool, 'msg' => string, 'data' => string|null]
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-git-getcommits"></a>
 
@@ -2179,7 +2795,7 @@
 
 - **返回**: `array` ['success' => bool, 'msg' => string, 'data' => array|null]
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-git-getcurrentbranch"></a>
 
@@ -2192,7 +2808,7 @@
 
 - **返回**: `array` ['success' => bool, 'msg' => string, 'data' => string|null]
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-git-delete"></a>
 
@@ -2206,9 +2822,9 @@
 
 - **返回**: `array` ['success' => bool, 'msg' => string]
 
-[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-git) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -2226,7 +2842,7 @@
 
 #### `init` `(static)`
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-logger-configure"></a>
 
@@ -2234,7 +2850,7 @@
 
 初始化配置
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-logger-message"></a>
 
@@ -2242,43 +2858,43 @@
 
 静态日志方法
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-logger-success"></a>
 
 #### `success` `(static)`
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-logger-error"></a>
 
 #### `error` `(static)`
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-logger-info"></a>
 
 #### `info` `(static)`
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-logger-warning"></a>
 
 #### `warning` `(static)`
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-logger-debug"></a>
 
 #### `debug` `(static)`
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-logger-tput"></a>
 
 #### `tput` `(static)`
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-logger-enableconsole"></a>
 
@@ -2286,15 +2902,15 @@
 
 开关控制
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-logger-enablefile"></a>
 
 #### `enableFile` `(static)`
 
-[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-logger) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -2312,7 +2928,7 @@
 
 #### `__construct`
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-render"></a>
 
@@ -2325,7 +2941,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-action"></a>
 
@@ -2340,7 +2956,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-id"></a>
 
@@ -2351,7 +2967,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-permission"></a>
 
@@ -2363,7 +2979,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-next"></a>
 
@@ -2371,7 +2987,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-prev"></a>
 
@@ -2379,7 +2995,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-current"></a>
 
@@ -2387,7 +3003,7 @@
 
 - **返回**: `array` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-buttons"></a>
 
@@ -2395,7 +3011,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-url"></a>
 
@@ -2407,7 +3023,7 @@
 
 - **返回**: `bool` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-image"></a>
 
@@ -2419,7 +3035,7 @@
 
 - **返回**: `bool` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-markdown"></a>
 
@@ -2430,19 +3046,19 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-at"></a>
 
 #### `at`
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-face"></a>
 
 #### `Face`
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-add"></a>
 
@@ -2453,7 +3069,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-cleanmarkdown"></a>
 
@@ -2461,7 +3077,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-cleanbutton"></a>
 
@@ -2469,7 +3085,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-clean"></a>
 
@@ -2477,7 +3093,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-get"></a>
 
@@ -2488,7 +3104,7 @@
 
 - **返回**: `mixed` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-send"></a>
 
@@ -2499,7 +3115,7 @@
 
 - **返回**: `array|Object` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-bind"></a>
 
@@ -2510,7 +3126,7 @@
 
 - **返回**: `void` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-markdown-escape"></a>
 
@@ -2522,9 +3138,9 @@
 
 - **返回**: `?string` 
 
-[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-markdown) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -2550,7 +3166,7 @@
 
 - **返回**: `Bool|String|JSONObject|Array` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-operate-set"></a>
 
@@ -2564,7 +3180,7 @@
 
 - **返回**: `Bool|int` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-operate-dir"></a>
 
@@ -2577,7 +3193,7 @@
 
 - **返回**: `Bool` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-operate-read_all"></a>
 
@@ -2590,7 +3206,7 @@
 
 - **返回**: `Array` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-operate-readall"></a>
 
@@ -2603,7 +3219,7 @@
 
 - **返回**: `Array` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-operate-read_all_dir"></a>
 
@@ -2616,7 +3232,7 @@
 
 - **返回**: `Array` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-operate-read_all_dir_list"></a>
 
@@ -2629,7 +3245,7 @@
 
 - **返回**: `Array` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-operate-readalldir"></a>
 
@@ -2642,13 +3258,13 @@
 
 - **返回**: `Array` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-operate-readfile"></a>
 
 #### `readFile` `(static)`
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-operate-unzip"></a>
 
@@ -2662,7 +3278,7 @@
 
 - **返回**: `boolean` true|false
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-operate-xcopy"></a>
 
@@ -2675,7 +3291,7 @@ copy 文件夹
 
 - **返回**: `Bool` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-operate-deldir"></a>
 
@@ -2688,7 +3304,7 @@ copy 文件夹
 
 - **返回**: `bool` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-operate-del_dir"></a>
 
@@ -2701,7 +3317,7 @@ copy 文件夹
 
 - **返回**: `bool` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-operate-delfile"></a>
 
@@ -2711,7 +3327,7 @@ copy 文件夹
 
 - **返回**: `Bool` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-operate-del_file"></a>
 
@@ -2721,9 +3337,9 @@ copy 文件夹
 
 - **返回**: `Bool` 
 
-[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-operate) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -2741,13 +3357,13 @@ copy 文件夹
 
 #### `__construct`
 
-[↩️ 返回类目录](#utils-pluginmanager) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-pluginmanager) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-pluginmanager-readpluginconfig"></a>
 
 #### `readPluginConfig`
 
-[↩️ 返回类目录](#utils-pluginmanager) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-pluginmanager) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-pluginmanager-installplugindeps"></a>
 
@@ -2755,7 +3371,7 @@ copy 文件夹
 
 安装插件依赖并生成autoload（优化版：避免重复生成）
 
-[↩️ 返回类目录](#utils-pluginmanager) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-pluginmanager) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-pluginmanager-loadpluginautoload"></a>
 
@@ -2763,9 +3379,9 @@ copy 文件夹
 
 加载插件自动加载（优化版：避免重复加载和注册）
 
-[↩️ 返回类目录](#utils-pluginmanager) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-pluginmanager) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -2791,7 +3407,7 @@ copy 文件夹
     - `path` string 路由路径（如 '/api/data'、'/user/:id'）
     - `callback` callable 回调函数（闭包/[$class, $method]/函数名）
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-route-post"></a>
 
@@ -2803,7 +3419,7 @@ copy 文件夹
     - `path` string 路由路径
     - `callback` callable 回调函数
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-route-put"></a>
 
@@ -2815,7 +3431,7 @@ copy 文件夹
     - `path` string 路由路径
     - `callback` callable 回调函数
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-route-delete"></a>
 
@@ -2827,7 +3443,7 @@ copy 文件夹
     - `path` string 路由路径
     - `callback` callable 回调函数
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-route-any"></a>
 
@@ -2839,7 +3455,7 @@ copy 文件夹
     - `path` string 路由路径
     - `callback` callable 回调函数
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-route-match"></a>
 
@@ -2853,7 +3469,7 @@ copy 文件夹
 
 - **返回**: `array|null` [回调函数, 路由参数数组]，未匹配返回null
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-route-registerbyannotation"></a>
 
@@ -2864,7 +3480,7 @@ copy 文件夹
 - **参数**:
     - `controllerClasses` string|array 控制器类名（单个类名或类名数组）
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-route-clear"></a>
 
@@ -2872,7 +3488,7 @@ copy 文件夹
 
 清空所有路由（测试/重置场景用）
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-route-getroutes"></a>
 
@@ -2882,7 +3498,7 @@ copy 文件夹
 
 - **返回**: `array` 路由规则数组
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-route-hasroute"></a>
 
@@ -2896,9 +3512,9 @@ copy 文件夹
 
 - **返回**: `bool` 是否存在
 
-[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-route) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -2916,7 +3532,7 @@ copy 文件夹
 
 #### `getInstance` `(static)`
 
-[↩️ 返回类目录](#utils-worker) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-worker) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-worker-getworkerlist"></a>
 
@@ -2924,7 +3540,7 @@ copy 文件夹
 
 核心方法：获取Worker列表，不存在则自动初始化空列表
 
-[↩️ 返回类目录](#utils-worker) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-worker) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-worker-addworker"></a>
 
@@ -2935,7 +3551,7 @@ copy 文件夹
 - **参数**:
     - `className` string 完整类名（如App\Plugins\Demo）
 
-[↩️ 返回类目录](#utils-worker) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-worker) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-worker-removeworker"></a>
 
@@ -2946,9 +3562,9 @@ copy 文件夹
 - **参数**:
     - `className` string 完整类名
 
-[↩️ 返回类目录](#utils-worker) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-worker) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
@@ -2966,7 +3582,7 @@ copy 文件夹
 
 #### `getInstance` `(static)`
 
-[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-yargs-command"></a>
 
@@ -2974,7 +3590,7 @@ copy 文件夹
 
 注册命令描述（支持子命令）
 
-[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-yargs-option"></a>
 
@@ -2982,7 +3598,7 @@ copy 文件夹
 
 注册选项参数规则
 
-[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-yargs-positional"></a>
 
@@ -2990,7 +3606,7 @@ copy 文件夹
 
 注册位置参数规则
 
-[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-yargs-gethelp"></a>
 
@@ -2998,7 +3614,7 @@ copy 文件夹
 
 生成帮助信息
 
-[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#目录索引)
 
 <a id="utils-yargs-parse"></a>
 
@@ -3006,9 +3622,9 @@ copy 文件夹
 
 解析入口
 
-[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#start)
+[↩️ 返回类目录](#utils-yargs) | [⬆️ 返回顶部](#目录索引)
 
-[⬆️ 返回顶部](#start)
+[⬆️ 返回顶部](#目录索引)
 
 ---
 
