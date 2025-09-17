@@ -1,9 +1,13 @@
 
 <a id="start"></a>
 
-# API 文档
+# 文档
 
 > 本文档由自动生成工具创建于 2025-09-17 13:17:05
+
+## 一些代码示例
+
+- 详情可以看 [示例](src/test.php)
 
 ```php
 //使用Api中的类
@@ -28,6 +32,44 @@ $this->raw; //raw_message，\Controller\Attr\Rule基于这个匹配
  * @param string $pattern 忘了干啥的了，不必理会
  * @param string|int $permission 权限等级，>= 才能触发，最高5(super)，可选4(owner)、3(admin)、2(user)、1(default)
 */
+
+```
+
+## 配置示例
+
+采用了**composer**配置，但多出一些**自定义配置**，底层还是**composer**
+
+```json
+
+{
+	"name": "plugin/test", //包名
+	"version": "2.1.4", //版本号
+	"displayName": "高级数据处理器 Pro", //插件显示名
+	"description": "一个提供多种数据处理功能的插件，支持数据转换、分析和可视化", //描述
+	"author": [ //作者信息列表
+		{
+			"name": "张三", //作者名
+			"email": "zhangsan@example.com", //联系邮箱
+			"homePage": "https://www.zhangsan-dev.com", //网站
+			"role": "开发者" //所属角色
+		}
+	],
+	"autoload": { //类似于composer的autoload
+		"psr-4": {
+			"test\\": "src/"
+		}
+	},
+	"require": {}, //所需要的composer包
+	"creationDate": "2023-01-15", //创建时间
+	"lastUpdate": "2023-10-28", //最后更新时间
+	"license": "MIT", //许可类型
+	"support": { //支持者信息
+		"documentation": "https://docs.example.com/data-processor", //官方文档地址
+		"issues": "https://github.com/example/data-processor/issues", //问题反馈地址
+		"forum": "https://forum.example.com/c/plugins/data-processor", //交流论坛地址
+		"sourceCode": "https://github.com/example/data-processor" //源代码地址
+	}
+}
 
 ```
 
